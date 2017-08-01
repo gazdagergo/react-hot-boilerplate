@@ -1,6 +1,8 @@
 react-hot-boilerplate
 =====================
 
+> (**artalar** fork) add styles (sass, less), fonts and images loading
+
 The minimal dev environment to enable live-editing React components.
 
 Based on the guide available at https://webpack.js.org/guides/hmr-react/
