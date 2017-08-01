@@ -32,14 +32,41 @@ module.exports = {
 
   module: {
     rules: [
-      {
-        test: /\.jsx?$/,
-        use: [
-          'babel-loader',
-        ],
-        exclude: /node_modules/,
+			{
+				test: /\.jsx?$/,
+				use: [
+					'babel-loader',
+				],
+				exclude: /node_modules/,
+			},
+			{
+				test: /\.(css|sass|scss)$/,
+				loader: ['style-loader', 'css-loader', 'sass-loader']
+			},
+			{
+				test: /\.(jpe?g|png|gif|svg)$/i,
+				loaders: [
+					'file-loader'
+				]
       },
-    ],
+      {
+        test: /\.less$/,
+        use: [{
+          loader: "style-loader"
+        }, {
+          loader: "css-loader"
+        }, {
+          loader: "less-loader", options: {
+            strictMath: true,
+            noIeCompat: true
+          }
+        }]
+      },
+			{
+				test: /\.(eot|ttf|woff|woff2)$/,
+				loader: 'file?name=public/fonts/[name].[ext]'
+			}
+		],
   },
 
   plugins: [

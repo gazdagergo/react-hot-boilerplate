@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gaearon/react-hot-boilerplate.git"
+    "url": "https://github.com/artalar/react-hot-boilerplate.git"
   },
   "keywords": [
     "react",
@@ -24,12 +24,12 @@
     "edit",
     "webpack"
   ],
-  "author": "Dan Abramov <dan.abramov@me.com> (http://github.com/gaearon)",
+  "author": "Dan Abramov <dan.abramov@me.com> (http://github.com/gaearon) forked by Artalar",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/gaearon/react-hot-boilerplate/issues"
+    "url": "https://github.com/artalar/react-hot-boilerplate/issues"
   },
-  "homepage": "https://github.com/gaearon/react-hot-boilerplate",
+  "homepage": "https://github.com/artalar/react-hot-boilerplate",
   "devDependencies": {
     "babel-core": "^6.22.1",
     "babel-loader": "^6.2.10",
@@ -38,8 +38,15 @@
     "babel-preset-stage-2": "^6.22.0",
     "copyfiles": "^1.2.0",
     "cross-env": "^3.1.4",
+    "css-loader": "^0.28.4",
+    "file-loader": "^0.11.2",
+    "less": "^2.7.2",
+    "less-loader": "^4.0.5",
+    "node-sass": "^4.5.3",
     "react-hot-loader": "^3.0.0-beta.6",
     "rimraf": "^2.6.0",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2",
     "webpack": "^2.2.0",
     "webpack-dev-server": "^2.2.0"
   },
@@ -47,7 +54,7 @@
     "babel-eslint": "^7.1.1",
     "eslint": "^3.14.1",
     "eslint-plugin-react": "^6.9.0",
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
   }
 }
