@@ -6,8 +6,8 @@ class App extends Component {
   render() {
     return (
       <div>
-        <div>Hello world!</div>
-        <Button />
+        <div className="hello">Hello world!</div>
+        <Button text="gombtext" />
       </div>
     );
   }
