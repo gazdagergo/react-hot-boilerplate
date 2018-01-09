@@ -1,9 +1,16 @@
 import React, { Component } from 'react';
+import Button from './Button';
 
-export default class App extends Component {
+class App extends Component {
+
   render() {
     return (
-      <div>Hello world!</div>
+      <div>
+        <div>Hello world!</div>
+        <Button />
+      </div>
     );
   }
 }
+
+export default App;
