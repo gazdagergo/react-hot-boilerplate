@@ -11,8 +11,10 @@ class Button2 extends Component {
   }
 
   handleClick() {
+    let counter = this.state.counter;
+    counter++;
     this.setState(
-      { counter: 2 }
+      { counter }
     )
   }
 
