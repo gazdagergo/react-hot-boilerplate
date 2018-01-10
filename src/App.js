@@ -19,6 +19,12 @@ class App extends Component {
     )
   }
 
+  componentDidMount(){
+    fetch("https://json-mock-server.firebaseio.com/votes.json")
+    .then(result => result.json())
+    .then(data => this.setState({ counter: data.count }))
+  }
+
   resetCounter() {
     this.setState({ counter: 1 })
   }
