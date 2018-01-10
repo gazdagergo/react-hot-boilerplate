@@ -28,7 +28,7 @@ class App extends Component {
       <div>
         <div className="hello">Hello world!</div>
         <Button text="reset" onClick={ this.resetCounter } />
-        <Button text={ this.state.counter } onClick={ this.increaseCounter } />
+        <Button text={ this.state.counter.toString() } onClick={ this.increaseCounter } />
       </div>
     );
   }
