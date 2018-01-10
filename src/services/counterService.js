@@ -11,7 +11,16 @@ const counterService = {
       )
     })
   ),
-  updateCounter: () => {}
+  updateCounter: (count) => {
+    fetch(`${config.baseUrl}.json`, {
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      method: 'PATCH',
+      body: JSON.stringify({ count })
+    })
+  }
 };
 
 export default counterService;
