@@ -1,15 +1,34 @@
 import React, { Component } from 'react';
-import Button3 from './Button3';
-import Button2 from './Button2';
+import Button from './Button';
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      counter: 1
+    }
+    this.increaseCounter = this.increaseCounter.bind(this);
+    this.resetCounter = this.resetCounter.bind(this);
+  }
+
+  increaseCounter() {
+    let counter = this.state.counter;
+    counter++;
+    this.setState(
+      { counter }
+    )
+  }
+
+  resetCounter() {
+    this.setState({ counter: 1 })
+  }
 
   render() {
     return (
       <div>
         <div className="hello">Hello world!</div>
-        <Button3 text="reset" onClick={ () => console.log('k') } />
-        <Button2 />
+        <Button text="reset" onClick={ this.resetCounter } />
+        <Button text={ this.state.counter } onClick={ this.increaseCounter } />
       </div>
     );
   }
