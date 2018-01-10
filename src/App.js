@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Button from './Button';
+import Button3 from './Button3';
 import Button2 from './Button2';
 
 class App extends Component {
@@ -8,7 +8,7 @@ class App extends Component {
     return (
       <div>
         <div className="hello">Hello world!</div>
-        <Button text="gombtext" />
+        <Button3 text="reset" onClick={ () => console.log('k') } />
         <Button2 />
       </div>
     );
