@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Button from './Button';
+import counterService from './services/counterService';
 
 class App extends Component {
   constructor() {
@@ -20,9 +21,12 @@ class App extends Component {
   }
 
   componentDidMount(){
-    fetch("https://json-mock-server.firebaseio.com/votes.json")
-    .then(result => result.json())
+    counterService.getCounter()
     .then(data => this.setState({ counter: data.count }))
+  }
+
+  componentDidUpdate(){
+    counterService.updateCounter(this.state.counter);
   }
 
   resetCounter() {
