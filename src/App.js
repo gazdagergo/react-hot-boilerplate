@@ -37,7 +37,9 @@ class App extends Component {
     return (
       <div>
         <div className="hello">Hello world!</div>
-        <Button text="reset" onClick={ this.resetCounter } />
+        <Button text="reset" onClick={ this.resetCounter }>
+          <img src="https://codesandbox.io/favicon.ico" alt="ico" />
+        </Button>
         <Button text={ this.state.counter.toString() } onClick={ this.increaseCounter } />
       </div>
     );
